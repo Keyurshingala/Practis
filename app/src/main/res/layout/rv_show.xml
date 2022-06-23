@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/iv"
+        android:layout_width="270px"
+        android:scaleType="centerCrop"
+        android:layout_height="@dimen/_40sdp"
+        android:layout_marginEnd="40px"
+        android:src="@color/purple_200" />
+</RelativeLayout>

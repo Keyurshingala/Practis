@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <androidx.constraintlayout.utils.widget.ImageFilterView
+        android:id="@+id/ivPosterImg"
+        android:layout_width="@dimen/_100sdp"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_launcher_background"
+        android:layout_marginEnd="@dimen/_8sdp"
+        android:adjustViewBounds="true"
+        android:scaleType="fitCenter"
+        app:round="@dimen/_8sdp"  />
+
+    <androidx.constraintlayout.utils.widget.ImageFilterView
+        android:id="@+id/ivLike"
+        android:layout_width="@dimen/_24sdp"
+        android:layout_height="@dimen/_24sdp"
+        android:layout_alignEnd="@id/ivPosterImg"
+        android:layout_alignBottom="@id/ivPosterImg"
+        android:layout_marginEnd="@dimen/_6sdp"
+        android:layout_marginBottom="@dimen/_4sdp"
+        android:foreground="?attr/selectableItemBackground"
+        android:background="@color/black"
+        android:padding="@dimen/_4sdp"
+        app:roundPercent="1" />
+
+    <ImageView
+        android:id="@+id/ivViewAll"
+        android:layout_width="@dimen/_32sdp"
+        android:layout_height="@dimen/_123sdp"
+        android:layout_centerVertical="true"
+        android:layout_marginEnd="@dimen/_8sdp"
+        android:visibility="gone"
+        tools:visibility="gone" />
+</RelativeLayout>
