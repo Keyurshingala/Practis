@@ -3,6 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="wrap_content"
+    android:animateLayoutChanges="true"
     android:layout_height="wrap_content">
 
     <androidx.constraintlayout.utils.widget.ImageFilterView
@@ -10,7 +11,7 @@
         android:layout_width="@dimen/_100sdp"
         android:layout_height="wrap_content"
         android:src="@drawable/ic_launcher_background"
-        android:layout_marginEnd="@dimen/_8sdp"
+        android:layout_marginBottom="@dimen/_8sdp"
         android:adjustViewBounds="true"
         android:scaleType="fitCenter"
         app:round="@dimen/_8sdp"  />

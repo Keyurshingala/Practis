@@ -37,4 +37,5 @@ public class LocationActivity extends AppCompatActivity {
         }
         return false;
     }
+
 }

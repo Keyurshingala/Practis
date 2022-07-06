@@ -3,19 +3,26 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="app/src/main/res/layout/activity_big_img.xml" value="0.1935185185185185" />
         <entry key="app/src/main/res/layout/activity_dragger2.xml" value="0.31666666666666665" />
         <entry key="app/src/main/res/layout/activity_finishable_timer.xml" value="0.31666666666666665" />
         <entry key="app/src/main/res/layout/activity_home.xml" value="0.2916666666666667" />
         <entry key="app/src/main/res/layout/activity_location.xml" value="0.3307291666666667" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.2916666666666667" />
+        <entry key="app/src/main/res/layout/activity_my.xml" value="0.3416666666666667" />
+        <entry key="app/src/main/res/layout/activity_save_uri.xml" value="0.3416666666666667" />
         <entry key="app/src/main/res/layout/activity_service.xml" value="0.3194444444444444" />
         <entry key="app/src/main/res/layout/activity_splash.xml" value="0.3296875" />
         <entry key="app/src/main/res/layout/activity_test.xml" value="0.31666666666666665" />
         <entry key="app/src/main/res/layout/activity_time.xml" value="0.28654545454545455" />
+        <entry key="app/src/main/res/layout/ic_add.xml" value="0.3296875" />
         <entry key="app/src/main/res/layout/item_layout.xml" value="0.31666666666666665" />
+        <entry key="app/src/main/res/layout/pb.xml" value="0.340625" />
+        <entry key="app/src/main/res/layout/rcv_ac.xml" value="0.3307291666666667" />
         <entry key="app/src/main/res/layout/rv_bg_layout.xml" value="0.3037037037037037" />
         <entry key="app/src/main/res/layout/rv_ca.xml" value="0.32564102564102565" />
         <entry key="app/src/main/res/layout/rv_ch.xml" value="0.3296875" />
+        <entry key="app/src/main/res/layout/rv_diffutil.xml" value="0.3416666666666667" />
         <entry key="app/src/main/res/layout/rv_layout.xml" value="0.3307291666666667" />
         <entry key="app/src/main/res/layout/rv_poster_h.xml" value="0.3307291666666667" />
         <entry key="app/src/main/res/layout/rv_show.xml" value="0.3296875" />
