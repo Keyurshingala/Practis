@@ -1,6 +1,9 @@
 package com.example.prc
 
+import android.graphics.Bitmap
+import android.graphics.Canvas
 import android.util.Log
+import android.view.View
 import android.widget.ImageView
 import com.bumptech.glide.Glide
 import com.bumptech.glide.load.resource.drawable.DrawableTransitionOptions
@@ -32,11 +35,30 @@ fun <T> T.log() {
     }
 }
 
+fun View.visible() {
+    this.visibility = View.VISIBLE
+}
+
+fun View.gon() {
+    this.visibility = View.GONE
+}
+
+fun View.invisible() {
+    this.visibility = View.INVISIBLE
+}
+
 fun Exception.print() {
     printStackTrace()
     (message + " | " + stackTrace[0].toString() + " | " + javaClass.name).log()
 }
 
+/** if dose not work call this method inside View.post() method **/
+fun View.toBmp(): Bitmap {
+    val b = Bitmap.createBitmap(width, height, Bitmap.Config.ARGB_8888)
+    layout(left, top, right, bottom)
+    draw(Canvas(b))
+    return b
+}
 
 fun ImageView.load(any: Any?, withCrossFade: Boolean = false) {
     Glide.with(this).load(any).placeholder(R.drawable.ic_launcher_background).error(R.drawable.ic_launcher_foreground).apply {
