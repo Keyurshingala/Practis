@@ -38,6 +38,11 @@ android {
 }
 
 dependencies {
+    //billing
+    def billing_version = "5.0.0"
+    implementation "com.android.billingclient:billing:$billing_version"
+    implementation "com.android.billingclient:billing-ktx:$billing_version"
+
     // Kotlin for viewmodel
     implementation("androidx.activity:activity-ktx:1.4.0")
 

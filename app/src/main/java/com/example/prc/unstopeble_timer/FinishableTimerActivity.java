@@ -25,12 +25,7 @@ public class FinishableTimerActivity extends AppCompatActivity {
         if (!isMyServiceRunning(TimerService.class))
             binding.btn.setVisibility(View.VISIBLE);
 
-        binding.btn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startTime();
-            }
-        });
+        binding.btn.setOnClickListener(v -> startTime());
 
         TimerService.setOnTik(new TimerService.OnCountDown() {
             @Override

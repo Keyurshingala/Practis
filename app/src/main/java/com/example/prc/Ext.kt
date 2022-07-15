@@ -7,6 +7,7 @@ import android.view.View
 import android.widget.ImageView
 import com.bumptech.glide.Glide
 import com.bumptech.glide.load.resource.drawable.DrawableTransitionOptions
+import com.google.gson.Gson
 import java.text.SimpleDateFormat
 import java.util.*
 
@@ -26,6 +27,8 @@ fun startHm(): String {
 }
 
 const val TAG = "FATZ"
+
+fun <T> T.gson() = Gson().toJson(this)
 
 fun <T> T.log() {
     try {
@@ -70,6 +73,21 @@ fun ImageView.load(any: Any?, withCrossFade: Boolean = false) {
 }
 
 //Extras
+
+fun test(){
+    buildMutableMap<String,String> {
+//        here  we can access method of maps
+    }
+}
+//we can use higher order function as extension function
+fun <K, V> buildMutableMap(build: HashMap<K, V>.() -> Unit): Map<K, V> {
+    val map = HashMap<K, V>()
+    map.build()
+    return map
+}
+
+
+
 data class Tp<out Z, out B, out C>(val first: Z, val second: B, val third: C)
 
 fun factorial(i: Int): Int {

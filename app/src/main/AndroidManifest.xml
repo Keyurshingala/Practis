@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="com.example.prc">
 
+    <uses-permission android:name="com.android.vending.BILLING" />
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
     <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
@@ -22,14 +23,19 @@
         android:usesCleartextTraffic="true"
         tools:targetApi="31">
         <activity
-            android:name=".color_picker.ColorPickerActivity"
-            android:exported="true" >
+            android:name=".InAppActivity"
+            android:exported="true">
             <intent-filter><action android:name="android.intent.action.MAIN" /><category android:name="android.intent.category.LAUNCHER" /></intent-filter>
+        </activity>
 
+        <activity
+            android:name=".color_picker.ColorPickerActivity"
+            android:exported="true">
         </activity>
         <activity
             android:name=".big_img.BigImgActivity"
             android:exported="true">
+
         </activity>
         <activity
             android:name=".save_doc_uri.SaveUriActivity"
