@@ -22,10 +22,15 @@
         android:theme="@style/Theme.Soket"
         android:usesCleartextTraffic="true"
         tools:targetApi="31">
+
+        <service android:name=".KillService"
+            android:stopWithTask="false"/>
+
         <activity
-            android:name=".InAppActivity"
+            android:name=".TestKt"
             android:exported="true">
             <intent-filter><action android:name="android.intent.action.MAIN" /><category android:name="android.intent.category.LAUNCHER" /></intent-filter>
+
         </activity>
 
         <activity
@@ -61,10 +66,9 @@
             android:exported="true" />
         <activity
             android:name=".simple_view_model.MyActivity"
-            android:exported="true" />
-        <activity
-            android:name=".TestKt"
-            android:exported="true" />
+            android:exported="true" >
+
+        </activity>
         <activity
             android:name=".unstopeble_timer.FinishableTimerActivity"
             android:exported="true" />

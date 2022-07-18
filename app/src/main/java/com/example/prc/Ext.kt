@@ -127,3 +127,7 @@ private fun upTo(i: Int, n: Int) {
         print("$n ")
     }
 }
+
+//        val uri = URI.create("content://com.android.providers.downloads.documents/document/raw%3A%2Fstorage%2Femulated%2F0%2FDownload%2FRoboto-Black.ttf")
+//        val path =  ("/document/raw:/storage/emulated/0/Download/Roboto-Black.ttf")
+//        copy(File(path),File("/storage/emulated/0/DCIM/Roboto-Black.ttf"))

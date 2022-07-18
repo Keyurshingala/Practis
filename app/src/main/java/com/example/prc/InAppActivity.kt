@@ -44,6 +44,7 @@ class InAppActivity : Base() {
 
                     billingClient.queryProductDetailsAsync(queryProductDetailsParams) { billingResult, productDetailsList ->
                         // check billingResult
+                        productDetailsList.log()
                         "queryProductDetailsAsync process returned productDetailsList".log()
 
                         val selectedPlan = 0
@@ -92,6 +93,7 @@ class InAppActivity : Base() {
 
             val purchasesResult = billingClient.queryPurchasesAsync(params.build())
             // check purchasesResult.billingResult
+            purchasesResult.log()
             "onResume process returned purchasesResult.purchasesList, e.g. display the plans user owns".log()
         }
     }
@@ -133,6 +135,33 @@ class InAppActivity : Base() {
         }
     }
 }
+/*During account hold, the subscription is not returned by BillingClient.queryPurchasesAsync().*/
+
+/*Warning: Don't remove a subscription from Google Play while any user is still entitled to the content.
+Removing content to which a user is entitled results in penalties.*/
+
+/*A cancelled subscription remains visible in the Play Store app until its expiration date.
+A user can restore a cancelled subscription before it expires by clicking Resubscribe (previously Restore) in the Subscriptions section in the Google Play Store app.*/
+
+/*If your app relies solely on queryPurchasesAsync() to check whether a user is entitled to a subscription,
+then your app should automatically handle grace period, as queryPurchasesAsync() continues to return cancelled purchases before their expiration dates.*/
+
+/*When a user's subscription is paused, the subscription is not returned by queryPurchasesAsync()*/
+
+/*Note: Google Play dynamically extends the expiryTime value until the grace period has expired.*/
+
+/*A user can voluntarily cancel a subscription from the Play Store or have their subscription automatically cancelled if they don't recover after being in account hold.
+When a user cancels a subscription they retain access to the content until the end of the current billing cycle.
+When the billing cycle ends, access is revoked.*/
+
+/*Note: If a subscription is set to renew on the 29th, 30th, or 31st of the month, in the next February of a non-leap year,
+the subscription renewal day is moved to the 28th and continues to renew on the 28th of each month for the duration of the subscription.
+Similarly, if a user starts a subscription on March 31st, the subscription renews on April 30th and continues to renew on the 30th of each month.*/
+
+/*The steps to create one-time products and subscriptions are similar.
+For each product, you need to provide a unique product ID, a title, a description, and pricing information.
+Subscriptions have additional required information,
+such as the renewal period, whether you're offering a free trial, and whether the subscription has an introductory offer.*/
 
 /*
 class BillingClientWrapper(context: Context) : PurchasesUpdatedListener {
