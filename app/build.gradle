@@ -1,6 +1,7 @@
 plugins {
     id 'com.android.application'
     id 'org.jetbrains.kotlin.android'
+    id 'com.google.gms.google-services'
 //    id 'dagger.hilt.android.plugin'
 //    id 'kotlin-kapt'
 }
@@ -38,6 +39,10 @@ android {
 }
 
 dependencies {
+    implementation 'com.google.firebase:firebase-appcheck-playintegrity:16.0.0'
+    implementation 'com.google.firebase:firebase-firestore-ktx:24.1.2'
+    implementation 'com.google.firebase:firebase-auth-ktx:21.0.6'
+
     //billing
     def billing_version = "5.0.0"
     implementation "com.android.billingclient:billing:$billing_version"
