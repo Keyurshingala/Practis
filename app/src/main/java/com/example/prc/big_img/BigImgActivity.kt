@@ -24,10 +24,12 @@ class BigImgActivity : Base() {
         cpd.start()
 
         Glide.with(this)
-                .load("https://i.pinimg.com/originals/bf/82/f6/bf82f6956a32819af48c257243e286.jpg")
+                .load("https://preview.redd.it/c3uhsgo1vx541.jpg?auto=webp&s=a45b583ebf921d3ad1649e77ad05e55226140120")
                 .skipMemoryCache(true)
                 .diskCacheStrategy(DiskCacheStrategy.NONE)
-                .placeholder(cpd)
+                .placeholder(cpd)                                    // comment when applying gif
+//              .thumbnail(Glide.with(activity).load("https://i.gifer.com/ZKZx.gif"))   //for gif
+//              .fitCenter()                                         //may be optional
                 .error(R.drawable.liked)
                 .into(bind.iv)
     }

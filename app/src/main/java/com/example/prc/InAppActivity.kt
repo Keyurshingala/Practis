@@ -16,7 +16,6 @@ class InAppActivity : Base() {
 
     private lateinit var billingClient: BillingClient
 
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         bind = ActivityInAppBinding.inflate(layoutInflater)
@@ -88,7 +87,6 @@ class InAppActivity : Base() {
         super.onResume()
         val params = QueryPurchasesParams.newBuilder().setProductType(BillingClient.ProductType.SUBS)
 
-        // uses queryPurchasesAsync Kotlin extension function
         CoroutineScope(Dispatchers.IO).launch {
 
             val purchasesResult = billingClient.queryPurchasesAsync(params.build())
@@ -111,7 +109,6 @@ class InAppActivity : Base() {
             "// Handle any other error codes.".log()
         }
     }
-
 
     private fun handlePurchase(purchase: Purchase) {
         purchase.gson().log()
