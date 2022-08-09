@@ -1,5 +1,6 @@
 package com.example.prc
 
+import android.app.Activity
 import android.graphics.Bitmap
 import android.graphics.Canvas
 import android.util.Log
@@ -7,9 +8,23 @@ import android.view.View
 import android.widget.ImageView
 import com.bumptech.glide.Glide
 import com.bumptech.glide.load.resource.drawable.DrawableTransitionOptions
+import com.google.android.material.snackbar.Snackbar
+import com.google.android.play.core.appupdate.AppUpdateManagerFactory
+import com.google.android.play.core.appupdate.AppUpdateOptions
+import com.google.android.play.core.install.InstallState
+import com.google.android.play.core.install.InstallStateUpdatedListener
+import com.google.android.play.core.install.model.AppUpdateType
+import com.google.android.play.core.install.model.InstallStatus
+import com.google.android.play.core.install.model.UpdateAvailability
+import com.google.android.play.core.ktx.installStatus
+import com.google.android.play.core.ktx.updatePriority
 import com.google.gson.Gson
 import java.text.SimpleDateFormat
 import java.util.*
+
+
+
+
 
 typealias lay = R.layout
 typealias dwbl = R.drawable
@@ -74,18 +89,18 @@ fun ImageView.load(any: Any?, withCrossFade: Boolean = false) {
 
 //Extras
 
-fun test(){
-    buildMutableMap<String,String> {
+fun test() {
+    buildMutableMap<String, String> {
 //        here  we can access method of maps
     }
 }
+
 //we can use higher order function as extension function
 fun <K, V> buildMutableMap(build: HashMap<K, V>.() -> Unit): Map<K, V> {
     val map = HashMap<K, V>()
     map.build()
     return map
 }
-
 
 
 data class Tp<out Z, out B, out C>(val first: Z, val second: B, val third: C)
@@ -131,3 +146,5 @@ private fun upTo(i: Int, n: Int) {
 //        val uri = URI.create("content://com.android.providers.downloads.documents/document/raw%3A%2Fstorage%2Femulated%2F0%2FDownload%2FRoboto-Black.ttf")
 //        val path =  ("/document/raw:/storage/emulated/0/Download/Roboto-Black.ttf")
 //        copy(File(path),File("/storage/emulated/0/DCIM/Roboto-Black.ttf"))
+
+

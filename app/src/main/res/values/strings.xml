@@ -1,3 +1,16 @@
 <resources>
     <string name="app_name">Prc</string>
+    <string name="info_failed">failed</string>
+    <string name="info_pending">pending</string>
+    <string name="info_canceled">canceled</string>
+    <string name="info_downloading">downloading</string>
+    <string name="info_installing">installing</string>
+    <string name="info_installed">installed</string>
+    <string name="info_restart">restart</string>
+    <string name="update_message">luanch update?</string>
+    <string name="action_restart">yes</string>
+    <string name="toast_updated">updated</string>
+    <string name="toast_started">started</string>
+    <string name="toast_cancelled">cancelled</string>
+    <string name="toast_failed">failed</string>
 </resources>
