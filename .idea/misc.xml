@@ -3,7 +3,9 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="app/src/main/res/drawable/gd_subs.xml" value="0.238" />
         <entry key="app/src/main/res/drawable/thumb_color_picker.xml" value="0.2255" />
+        <entry key="app/src/main/res/layout/activity_add.xml" value="0.34322916666666664" />
         <entry key="app/src/main/res/layout/activity_big_img.xml" value="0.1935185185185185" />
         <entry key="app/src/main/res/layout/activity_color_picker.xml" value="0.3416666666666667" />
         <entry key="app/src/main/res/layout/activity_dragger2.xml" value="0.31666666666666665" />
@@ -18,8 +20,9 @@
         <entry key="app/src/main/res/layout/activity_save_uri.xml" value="0.3416666666666667" />
         <entry key="app/src/main/res/layout/activity_service.xml" value="0.3194444444444444" />
         <entry key="app/src/main/res/layout/activity_splash.xml" value="0.3296875" />
-        <entry key="app/src/main/res/layout/activity_test.xml" value="0.31666666666666665" />
+        <entry key="app/src/main/res/layout/activity_test.xml" value="0.25833333333333336" />
         <entry key="app/src/main/res/layout/activity_time.xml" value="0.28654545454545455" />
+        <entry key="app/src/main/res/layout/activity_wall.xml" value="0.34322916666666664" />
         <entry key="app/src/main/res/layout/ic_add.xml" value="0.3296875" />
         <entry key="app/src/main/res/layout/item_layout.xml" value="0.31666666666666665" />
         <entry key="app/src/main/res/layout/pb.xml" value="0.340625" />

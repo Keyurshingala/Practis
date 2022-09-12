@@ -3,6 +3,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="com.example.prc">
 
+    <uses-permission
+        android:name="android.permission.RECORD_AUDIO"
+        tools:node="remove" />
+    <uses-permission android:name="android.permission.SET_WALLPAPER" />
     <uses-permission android:name="com.android.vending.BILLING" />
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
@@ -24,32 +28,27 @@
         android:usesCleartextTraffic="true"
         tools:targetApi="31">
         <activity
-            android:name=".InAppUpdateActivity"
+            android:name=".set_wall.WallActivity"
+            android:exported="true" >
+            <intent-filter><action android:name="android.intent.action.MAIN" /><category android:name="android.intent.category.LAUNCHER" /></intent-filter>
+        </activity>
+
+        <activity
+            android:name=".native_ad.AddActivity"
             android:exported="false" />
         <activity
             android:name=".fire_store.FireStoreActivity"
             android:exported="true">
-
         </activity>
-
-        <service
-            android:name=".KillService"
-            android:stopWithTask="false" />
-
         <activity
-            android:name=".in_app_update.InAppUpdateActivity"
-            android:exported="true">
-            <intent-filter><action android:name="android.intent.action.MAIN" /><category android:name="android.intent.category.LAUNCHER" /></intent-filter>
-
-        </activity>
-
+            android:name=".MainActivity"
+            android:exported="true" />
         <activity
             android:name=".color_picker.ColorPickerActivity"
             android:exported="true" />
         <activity
-            android:name=".big_img.BigImgActivity"
-            android:exported="true">
-        </activity>
+            android:name=".TestKt"
+            android:exported="true" />
         <activity
             android:name=".save_doc_uri.SaveUriActivity"
             android:exported="true" />

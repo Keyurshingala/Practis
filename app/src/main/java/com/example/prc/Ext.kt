@@ -16,8 +16,8 @@ import com.google.android.play.core.install.InstallStateUpdatedListener
 import com.google.android.play.core.install.model.AppUpdateType
 import com.google.android.play.core.install.model.InstallStatus
 import com.google.android.play.core.install.model.UpdateAvailability
-import com.google.android.play.core.ktx.installStatus
-import com.google.android.play.core.ktx.updatePriority
+//import com.google.android.play.core.ktx.installStatus
+//import com.google.android.play.core.ktx.updatePriority
 import com.google.gson.Gson
 import java.text.SimpleDateFormat
 import java.util.*

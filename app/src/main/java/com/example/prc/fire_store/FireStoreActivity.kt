@@ -71,14 +71,12 @@ class FireStoreActivity : Base() {
                 }*/
 
         //to read object of collection pass collection name
-        "base start".log()
         Firebase.firestore.collection("base")
                 .get()
                 .addOnSuccessListener { result ->
                     for (document in result) {
                         document.data.gson().log()
                     }
-                    "base end".log()
 
                 }.addOnFailureListener { e ->
                     e.log()

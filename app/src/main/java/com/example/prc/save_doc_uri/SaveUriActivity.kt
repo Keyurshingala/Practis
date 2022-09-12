@@ -6,7 +6,6 @@ import android.net.Uri
 import android.os.Bundle
 import androidx.activity.result.contract.ActivityResultContracts
 import com.example.prc.Base
-import com.example.prc.FileUtils
 import com.example.prc.databinding.ActivitySaveUriBinding
 import java.io.File
 
@@ -23,8 +22,8 @@ class SaveUriActivity : Base() {
 
                 // document uri content://com.android.providers.downloads.documents/document/raw%3A%2Fstorage%2Femulated%2F0%2FDownload%2FRoboto-Black.ttf
                 val uri: Uri = result.data!!.data!!
-                val source = File(FileUtils.getPath(this, uri))
-                val destination = File(cacheDir.absolutePath + "/font/" + source.name)
+
+                val destination = File(cacheDir.absolutePath + "/font/" + uri.path!!.split("/").last())
 
                 if (destination.exists() && destination.length() != 0L)
                     "File exists".tos()

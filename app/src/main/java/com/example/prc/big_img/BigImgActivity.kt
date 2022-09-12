@@ -2,6 +2,7 @@ package com.example.prc.big_img
 
 import android.graphics.Color
 import android.os.Bundle
+import android.view.MotionEvent
 import androidx.swiperefreshlayout.widget.CircularProgressDrawable
 import com.bumptech.glide.Glide
 import com.bumptech.glide.load.engine.DiskCacheStrategy
@@ -9,18 +10,20 @@ import com.example.prc.Base
 import com.example.prc.R
 import com.example.prc.databinding.ActivityBigImgBinding
 
+
 class BigImgActivity : Base() {
 
-    lateinit var bind:ActivityBigImgBinding
+    lateinit var bind: ActivityBigImgBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         bind = ActivityBigImgBinding.inflate(layoutInflater)
         setContentView(bind.root)
 
+
         val cpd = CircularProgressDrawable(this)
         cpd.strokeWidth = 5f
         cpd.centerRadius = 30f
-        cpd.setColorSchemeColors(Color.GREEN,Color.CYAN,Color.LTGRAY)
+        cpd.setColorSchemeColors(Color.GREEN, Color.CYAN, Color.LTGRAY)
         cpd.start()
 
         Glide.with(this)
@@ -33,4 +36,5 @@ class BigImgActivity : Base() {
                 .error(R.drawable.liked)
                 .into(bind.iv)
     }
+
 }

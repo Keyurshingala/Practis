@@ -14,8 +14,8 @@ import com.google.android.play.core.install.model.ActivityResult.RESULT_IN_APP_U
 import com.google.android.play.core.install.model.AppUpdateType
 import com.google.android.play.core.install.model.InstallStatus
 import com.google.android.play.core.install.model.UpdateAvailability
-import com.google.android.play.core.ktx.installStatus
-import com.google.android.play.core.ktx.updatePriority
+//import com.google.android.play.core.ktx.installStatus
+//import com.google.android.play.core.ktx.updatePriority
 
 
 class InAppUpdateActivity : Base() {
@@ -69,7 +69,7 @@ class InAppUpdateActivity : Base() {
 
         appUpdateManager.registerListener(object : InstallStateUpdatedListener {
             override fun onStateUpdate(it: InstallState) {
-                when (it.installStatus) {
+                when (it.installStatus()) {
                     InstallStatus.DOWNLOADED -> showSnack()
                     InstallStatus.INSTALLED -> appUpdateManager.unregisterListener(this)
                     InstallStatus.FAILED -> "FAILED : + ${it.installErrorCode()}".tosL()
@@ -85,7 +85,7 @@ class InAppUpdateActivity : Base() {
                 AppUpdateManagerFactory.create(this).startUpdateFlowForResult(
                         updateInfo,
                         this,
-                        AppUpdateOptions.newBuilder(if (updateInfo.updatePriority >= 4) AppUpdateType.IMMEDIATE else AppUpdateType.FLEXIBLE)
+                        AppUpdateOptions.newBuilder(if (updateInfo.updatePriority() >= 4) AppUpdateType.IMMEDIATE else AppUpdateType.FLEXIBLE)
                                 .setAllowAssetPackDeletion(true)
                                 .build(),
                         IN_APP_UPDATE
