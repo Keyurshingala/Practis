@@ -13,4 +13,6 @@
     <string name="toast_started">started</string>
     <string name="toast_cancelled">cancelled</string>
     <string name="toast_failed">failed</string>
+    <string name="title_file_download">title_file_download</string>
+    <string name="downloading">downloading</string>
 </resources>

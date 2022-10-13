@@ -13,11 +13,14 @@ public class MainActivity extends Base {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        a.b();
     }
 
+    A a;
+    interface A {
+        void b();
+    }
 }
-
-
 
 
 //    private synchronized void initUI() {
