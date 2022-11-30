@@ -26,7 +26,6 @@ class BigImgActivity : Base() {
         bind = ActivityBigImgBinding.inflate(layoutInflater)
         setContentView(bind.root)
 
-
         val cpd = CircularProgressDrawable(this)
         cpd.strokeWidth = 5f
         cpd.centerRadius = 30f
@@ -48,7 +47,7 @@ class BigImgActivity : Base() {
 
     private fun enqueueDownload(context: Context) {
         val fileName = "${System.currentTimeMillis()}.png"
-        val destination = "${Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DCIM).path}/$fileName"
+        val destination = "${Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS).path}/$fileName"
 
         val file = File(destination)
         if (file.exists()) file.delete()

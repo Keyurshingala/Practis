@@ -53,6 +53,14 @@ fun <T> T.log() {
     }
 }
 
+inline fun exc(block: () -> Unit) {
+    try {
+        block()
+    } catch (e: Exception) {
+        e.print()
+    }
+}
+
 fun View.visible() {
     this.visibility = View.VISIBLE
 }

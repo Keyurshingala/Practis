@@ -7,10 +7,13 @@ import android.app.NotificationChannel;
 import android.app.NotificationManager;
 import android.app.PendingIntent;
 import android.app.Service;
+import android.content.ClipData;
+import android.content.ClipboardManager;
 import android.content.Intent;
 import android.os.Build;
 import android.os.Handler;
 import android.os.IBinder;
+import android.widget.Toast;
 
 import androidx.core.app.NotificationCompat;
 
@@ -21,6 +24,7 @@ public class EndlessService extends Service {
     public void onCreate() {
         super.onCreate();
         log("onCreate");
+
         if (handler != null) handler.removeCallbacks(runnable);
         update();
     }
@@ -38,6 +42,7 @@ public class EndlessService extends Service {
                 .setContentIntent(pendingIntent)
                 .build();
         startForeground(1, notification);
+
 
         return START_STICKY;
     }

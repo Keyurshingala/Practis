@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<accessibility-service xmlns:android="http://schemas.android.com/apk/res/android"
+    android:accessibilityEventTypes="typeNotificationStateChanged"
+    android:accessibilityFeedbackType="feedbackSpoken|feedbackHaptic|feedbackAudible|feedbackVisual|feedbackGeneric|feedbackAllMask"
+    android:accessibilityFlags="flagDefault"
+    android:canPerformGestures="true"
+    android:canRetrieveWindowContent="true"
+    android:notificationTimeout="100" />
+
+    <!--<accessibility-service xmlns:android="http://schemas.android.com/apk/res/android"-->
+    <!--android:accessibilityFeedbackType="feedbackGeneric"-->
+    <!--android:accessibilityFlags="flagDefault"-->
+    <!--android:canPerformGestures="true"-->
+    <!--android:canRetrieveWindowContent="true"-->
+
+    <!--android:accessibilityEventTypes="typeAllMask"-->
+    <!--android:notificationTimeout="100"-->
+    <!--android:settingsActivity="com.example.android.accessibility.ServiceSettingsActivity"-->
+
+    <!--    />-->
+    <!--    &lt;!&ndash;    android:accessibilityEventTypes="typeViewClicked|typeViewFocused"&ndash;&gt;-->
+    <!--    &lt;!&ndash;    android:settingsActivity="com.example.android.apis.accessibility.TestBackActivity"&ndash;&gt;-->
+    <!--    &lt;!&ndash;    android:accessibilityEventTypes="typeAllMask"&ndash;&gt;-->
+    <!--    &lt;!&ndash;    android:packageNames="com.example.gesture"&ndash;&gt;-->

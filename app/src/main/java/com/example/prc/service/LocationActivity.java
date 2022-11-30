@@ -1,16 +1,22 @@
 package com.example.prc.service;
 
+import static androidx.core.content.ContextCompat.getSystemService;
+
 import android.app.ActivityManager;
+import android.content.ClipData;
+import android.content.ClipboardManager;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.content.ContextCompat;
 
 import com.example.prc.databinding.ActivityLocationBinding;
 
-public class LocationActivity extends AppCompatActivity {
+public class LocationActivity extends AppCompatActivity implements ClipboardManager.OnPrimaryClipChangedListener {
 
     ActivityLocationBinding binding;
 
@@ -38,4 +44,12 @@ public class LocationActivity extends AppCompatActivity {
         return false;
     }
 
+    @Override
+    public void onPrimaryClipChanged() {
+        ClipboardManager clipBoard = (ClipboardManager) getSystemService(CLIPBOARD_SERVICE);
+        CharSequence pasteData = "";
+        ClipData.Item item = clipBoard.getPrimaryClip().getItemAt(0);
+        pasteData = item.getText();
+        Toast.makeText(getApplicationContext(), "copied val=" + pasteData, Toast.LENGTH_SHORT).show();
+    }
 }

@@ -22,9 +22,7 @@ public class HomeActivity extends AppCompatActivity {
         binding = ActivityHomeBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
-        binding.btn.setOnClickListener(v -> {
-            startAlert();
-        });
+        binding.btn.setOnClickListener(v -> startAlert());
 
     }
 

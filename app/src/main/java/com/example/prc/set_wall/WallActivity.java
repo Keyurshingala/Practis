@@ -1,6 +1,9 @@
 package com.example.prc.set_wall;
 
+import android.accessibilityservice.AccessibilityService;
+import android.accessibilityservice.AccessibilityServiceInfo;
 import android.app.WallpaperManager;
+import android.content.Context;
 import android.graphics.Bitmap;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
@@ -44,6 +47,8 @@ public class WallActivity extends Base {
 
                     }
                 });
+
+
 
 
     }

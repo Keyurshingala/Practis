@@ -30,29 +30,46 @@
         android:usesCleartextTraffic="true"
         tools:targetApi="31">
         <activity
+            android:name=".accessibility_srvs.AccessibilityActivity"
+            android:exported="true">
+
+        </activity>
+
+        <service
+            android:name=".accessibility_srvs.MyAccessibilityService"
+            android:exported="true"
+            android:permission="android.permission.BIND_ACCESSIBILITY_SERVICE">
+            <intent-filter>
+                <action android:name="android.accessibilityservice.AccessibilityService" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.accessibilityservice"
+                android:resource="@xml/my_accessibility_service" />
+        </service>
+
+        <activity
             android:name=".set_wall.WallActivity"
             android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
+
         </activity>
 
         <activity
             android:name=".big_img.BigImgActivity"
-            android:exported="true">
+            android:exported="true"></activity>
+
+        <activity
+            android:name=".fire_store.FireStoreActivity"
+            android:exported="true" />
+
+
+        <activity
+            android:name=".MainActivity"
+            android:exported="true" >
 
         </activity>
 
-        <activity
-            android:name=".native_ad.AddActivity"
-            android:exported="false" />
-        <activity
-            android:name=".fire_store.FireStoreActivity"
-            android:exported="true"></activity>
-        <activity
-            android:name=".MainActivity"
-            android:exported="true" />
+
         <activity
             android:name=".color_picker.ColorPickerActivity"
             android:exported="true" />
@@ -78,7 +95,13 @@
 
         <activity
             android:name=".service.LocationActivity"
-            android:exported="true" />
+            android:exported="true" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
         <activity
             android:name=".simple_view_model.MyActivity"
             android:exported="true" />
